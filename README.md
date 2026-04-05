@@ -9,3 +9,4 @@
   3. Core algorithm (Develop the Metropolis-within-Gibbs sampler) (w5-w6);
   4. Calculate VaR and ES, uncertainty quantification, find credible intervals (w5-w6);
   5. Report, presentation, submission (w7-w8);
+Now we are working on figuring out prior, posterior, and the parameters of t-distribution.
