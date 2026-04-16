@@ -1,0 +1,11 @@
+$ python bayesian_estimation.py
+Iteration 2000
+Iteration 4000
+Iteration 6000
+Iteration 8000
+Converged at iteration 8284
+Posterior mean (mu): 0.001342
+Posterior variance (sigma^2): 0.000136
+Posterior degrees of freedom (nu): 6.82
+VaR (95%): 0.021150
+Expected Shortfall (ES) (95%): 0.026785
