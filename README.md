@@ -180,7 +180,7 @@ where $\ell = 0.5$ is the proposal standard deviation.
 
 The acceptance ratio is:
 
-$$\alpha = \min\{1, \frac{f(\nu^* | \text{data})}{f(\nu^{(t)} | \text{data})}\right\}$$
+$$\alpha = \min\{1, \frac{f(\nu^* | \text{data})}{f(\nu^{(t)} | \text{data})}\}$$
 
 The log-posterior for $\nu$:
 
