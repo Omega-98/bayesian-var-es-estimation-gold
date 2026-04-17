@@ -1,12 +1,4 @@
-### STATS 211: Stochastic Process Course Project
-- Topic: Gold VaR (Value at Risk) and ES (Expected Shortfall) Analysis Based on Bayesian Risk Analysis
-- Data source: https://www.investing.com/commodities/gold-historical-data, from Apr. 2, 2022 to Apr. 2, 2026
-- Research Method: t distribution, Metropolis within Gibbs
-- Tools: Python (numpy, pandas, matplotlib, seaborn, yfinance), AI tools (Gemini, OpenCode, Minimax)
-
-
 # Bayesian VAR-ES Estimation: Code Architecture, Mathematical Principles and Workflow
-Update on Apr. 17, 2026
 
 ## 1. Code Architecture
 
@@ -294,4 +286,3 @@ Thinning keeps every $k$-th sample to reduce **autocorrelation**. Highly autocor
 | `trace_plots.png` | Sample trajectories (thinned) for all parameters |
 | `posterior_histograms.png` | Marginal posterior distributions |
 | Console output | Summary statistics and ESS |
-
