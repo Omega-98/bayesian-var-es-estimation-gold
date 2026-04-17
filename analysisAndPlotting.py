@@ -15,9 +15,9 @@ returns = df['Log_Return'].dropna().values
 n = len(returns)
 
 # MCMC Settings
-iterations = 100000
-burn_in = 5000
-thin_factor = 20
+iterations = 10000000
+burn_in = 10000
+thin_factor = 50
 
 # Initial Values
 mu = np.mean(returns)
