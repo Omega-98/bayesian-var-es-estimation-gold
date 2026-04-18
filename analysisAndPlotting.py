@@ -15,9 +15,9 @@ returns = df['Log_Return'].dropna().values
 n = len(returns)
 
 # MCMC Settings
-iterations = 10000000
-burn_in = 10000
-thin_factor = 50
+iterations = 50000000
+burn_in = 30000
+thin_factor = 100
 
 # Initial Values
 mu = np.mean(returns)
@@ -151,44 +151,44 @@ def plot_histogram(samples, name, ax):
 fig1, axes1 = plt.subplots(3, 2, figsize=(14, 10))
 
 plot_autocorrelation(mu_burned, 'mu (burned, no thinning)', axes1[0, 0])
-plot_autocorrelation(sigma2_burned, 'sigma2 (burned, no thinning)', axes1[1, 0])
+plot_autocorrelation(sigma2_burned, 'sigma^2 (burned, no thinning)', axes1[1, 0])
 plot_autocorrelation(nu_burned, 'nu (burned, no thinning)', axes1[2, 0])
 
 plot_autocorrelation(mu_thinned, 'mu (thinned)', axes1[0, 1])
-plot_autocorrelation(sigma2_thinned, 'sigma2 (thinned)', axes1[1, 1])
+plot_autocorrelation(sigma2_thinned, 'sigma^2 (thinned)', axes1[1, 1])
 plot_autocorrelation(nu_thinned, 'nu (thinned)', axes1[2, 1])
 
 plt.tight_layout()
-plt.savefig('autocorrelation_plots.png', dpi=150)
+plt.savefig('autocorrelation_plots.png', dpi=600)
 print("Autocorrelation plots saved to 'autocorrelation_plots.png'")
 
 # Create figure for trace plots
 fig2, axes2 = plt.subplots(3, 1, figsize=(14, 10))
 
 plot_trace(mu_thinned, 'mu', axes2[0])
-plot_trace(sigma2_thinned, 'sigma2', axes2[1])
+plot_trace(sigma2_thinned, 'sigma^2', axes2[1])
 plot_trace(nu_thinned, 'nu', axes2[2])
 
 plt.tight_layout()
-plt.savefig('trace_plots.png', dpi=150)
+plt.savefig('trace_plots.png', dpi=600)
 print("Trace plots saved to 'trace_plots.png'")
 
 # Create figure for posterior histograms
 fig3, axes3 = plt.subplots(3, 1, figsize=(10, 12))
 
 plot_histogram(mu_thinned, 'mu', axes3[0])
-plot_histogram(sigma2_thinned, 'sigma2', axes3[1])
+plot_histogram(sigma2_thinned, 'sigma^2', axes3[1])
 plot_histogram(nu_thinned, 'nu', axes3[2])
 
 plt.tight_layout()
-plt.savefig('posterior_histograms.png', dpi=150)
+plt.savefig('posterior_histograms.png', dpi=600)
 print("Posterior histograms saved to 'posterior_histograms.png'")
 
 # Print summary statistics
 print("\n" + "="*60)
 print("SUMMARY STATISTICS (after burn-in and thinning)")
 print("="*60)
-for name, samples in [('mu', mu_thinned), ('sigma2', sigma2_thinned), ('nu', nu_thinned)]:
+for name, samples in [('mu', mu_thinned), ('sigma^2', sigma2_thinned), ('nu', nu_thinned)]:
     print(f"\n{name}:")
     print(f"  Mean: {np.mean(samples):.6f}")
     print(f"  Std:  {np.std(samples):.6f}")
@@ -207,7 +207,7 @@ def effective_sample_size(samples, max_lag=100):
 print("\n" + "="*60)
 print("EFFECTIVE SAMPLE SIZE (ESS)")
 print("="*60)
-for name, samples in [('mu', mu_thinned), ('sigma2', sigma2_thinned), ('nu', nu_thinned)]:
+for name, samples in [('mu', mu_thinned), ('sigma^2', sigma2_thinned), ('nu', nu_thinned)]:
     ess = effective_sample_size(samples)
     print(f"{name}: ESS = {ess:.0f} (original: {len(samples)})")
 

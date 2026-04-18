@@ -1,0 +1,41 @@
+Raw samples: 50000000
+After burn-in: 49970000
+After thinning: 499700
+Autocorrelation plots saved to 'autocorrelation_plots.png'
+Trace plots saved to 'trace_plots.png'
+Posterior histograms saved to 'posterior_histograms.png'
+
+============================================================
+SUMMARY STATISTICS (after burn-in and thinning)
+============================================================
+
+mu:
+  Mean: 0.001303
+  Std:  0.000420
+  2.5%: 0.000485
+  97.5%:0.002125
+
+sigma^2:
+  Mean: 0.000104
+  Std:  0.000007
+  2.5%: 0.000091
+  97.5%:0.000119
+
+nu:
+  Mean: 1.898428
+  Std:  0.274832
+  2.5%: 1.433409
+  97.5%:2.507564
+
+============================================================
+EFFECTIVE SAMPLE SIZE (ESS)
+============================================================
+mu: ESS = 499700 (original: 499700)
+sigma^2: ESS = 499700 (original: 499700)
+nu: ESS = 499700 (original: 499700)
+
+Thinning analysis completed!
+Check the saved plots to verify thinning effectiveness:
+  1. Autocorrelation should drop quickly (within ~10-20 lags)
+  2. Trace plots should show 'fuzzy caterpillar' pattern (iid)
+  3. Posterior histograms should show smooth distributions
