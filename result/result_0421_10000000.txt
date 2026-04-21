@@ -1,0 +1,66 @@
+Raw samples: 10000000
+After burn-in: 9990000
+After thinning: 55500
+mu autocorrelation plot saved to 'plots/mu_autocorrelation_10000000.png'
+mu autocorrelation (thinned) plot saved to 'plots/mu_autocorrelation_thinned_10000000.png'
+sigma2 autocorrelation plot saved to 'plots/sigma2_autocorrelation_10000000.png'
+sigma2 autocorrelation (thinned) plot saved to 'plots/sigma2_autocorrelation_thinned_10000000.png'
+nu autocorrelation plot saved to 'plots/nu_autocorrelation_10000000.png'
+nu autocorrelation (thinned) plot saved to 'plots/nu_autocorrelation_thinned_10000000.png'
+mu trace plot saved to 'plots/mu_trace_10000000.png'
+sigma2 trace plot saved to 'plots/sigma2_trace_10000000.png'
+nu trace plot saved to 'plots/nu_trace_10000000.png'
+mu histogram saved to 'plots/mu_histogram_10000000.png'
+sigma2 histogram saved to 'plots/sigma2_histogram_10000000.png'
+nu histogram saved to 'plots/nu_histogram_10000000.png'
+VaR histogram saved to 'plots/VaR_histogram_10000000.png'
+ES histogram saved to 'plots/ES_histogram_10000000.png'
+
+============================================================
+SUMMARY STATISTICS (after burn-in and thinning)
+============================================================
+
+mu:
+  Mean: 0.001303
+  Std:  0.000418
+  2.5%: 0.000486
+  97.5%:0.002126
+
+sigma^2:
+  Mean: 0.000104
+  Std:  0.000007
+  2.5%: 0.000091
+  97.5%:0.000119
+
+nu:
+  Mean: 1.900500
+  Std:  0.275312
+  2.5%: 1.435704
+  97.5%:2.517606
+
+VaR:
+  Mean: -0.030219
+  Std:  0.003204
+  2.5%: -0.037498
+  97.5%:-0.025013
+
+ES:
+  Mean: -6.885264
+  Std:  2.233085
+  2.5%: -12.338761
+  97.5%:-4.233360
+
+============================================================
+EFFECTIVE SAMPLE SIZE (ESS)
+============================================================
+mu: ESS = 54283 (original: 55500)
+sigma^2: ESS = 55230 (original: 55500)
+nu: ESS = 55235 (original: 55500)
+VaR: ESS = 55159 (original: 55500)
+ES: ESS = 54646 (original: 55500)
+
+Thinning analysis completed!
+Check the saved plots to verify thinning effectiveness:
+  1. Autocorrelation should drop quickly (within ~10-20 lags)
+  2. Trace plots should show 'fuzzy caterpillar' pattern (iid)
+  3. Posterior histograms should show smooth distributions
